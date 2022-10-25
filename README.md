@@ -4,8 +4,6 @@
 
 npm install
 
-npx cypress open
-
 npx cypress run --env allure=true
 
 npm run allure:report
