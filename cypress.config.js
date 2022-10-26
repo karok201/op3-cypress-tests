@@ -3,6 +3,7 @@ const allureWriter = require('@shelex/cypress-allure-plugin/writer');
 
 module.exports = defineConfig({
   videoCompression: false,
+  screenshotOnRunFailure: false,
   e2e: {
     setupNodeEvents(on, config) {
       allureWriter(on, config);
@@ -10,7 +11,3 @@ module.exports = defineConfig({
     },
   },
 });
-
-Cypress.Screenshot.defaults({
-  screenshotOnRunFailure: false,
-})
