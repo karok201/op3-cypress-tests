@@ -15,6 +15,10 @@
 
 // Import commands.js using ES2015 syntax:
 import './commands'
+
+Cypress.on('uncaught:exception', (err, runnable) => {
+    return false;
+});
 import '@shelex/cypress-allure-plugin';
 import 'cypress-xpath';
 // Alternatively you can use CommonJS syntax:

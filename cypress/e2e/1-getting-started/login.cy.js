@@ -1,4 +1,4 @@
-describe('Login', () => {
+describe('Login test', () => {
     const email = 'project2@it-delta.ru';
     const password = '159159';
 
