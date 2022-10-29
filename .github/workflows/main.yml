@@ -1,6 +1,6 @@
 name: QA Testing server
 
-on: repository_dispatch
+on: workflow_dispatch
 
 jobs:
   deploy:
