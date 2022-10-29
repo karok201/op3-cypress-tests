@@ -55,6 +55,13 @@ jobs:
             github_token: ${{ secrets.GITHUB_TOKEN }}
             publish_branch: allure
             publish_dir: allure-history
-
+        
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: JamesIves/github-pages-deploy-action@4.2.0
+        with:
+          branch: gh-pages
+          folder: ./allure-history
+          
       - name: Show allure
         run: cat ./allure-history/index.html
