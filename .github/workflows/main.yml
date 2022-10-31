@@ -1,6 +1,6 @@
 name: QA Test prod after merge
 
-on: workflow_dispatch
+on: [workflow_dispatch, push]
 
 jobs:
   deploy:
@@ -60,6 +60,7 @@ jobs:
         id: deployment
         uses: JamesIves/github-pages-deploy-action@4.2.0
         with:
+          token: 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	
           branch: gh-pages
           folder: ./allure-history
           
