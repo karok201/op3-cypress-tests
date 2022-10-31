@@ -61,7 +61,7 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@4.2.0
         with:
           token: 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	
-          branch: gh-pages
+          branch: main
           folder: ./allure-history
           
       - name: Show allure
