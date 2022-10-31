@@ -17,21 +17,15 @@ jobs:
         run: |
             npx cypress cache path
             npx cypress cache list
-            
       - name: Install Cypress
         run: |
             npx cypress install
             npx cypress cache list
       - name: Run Cypress
         continue-on-error: true
-        run: npm run cy:run
+        run: DEBUG=allure-plugin* npx cypress run --env allure=true --browser chrome
         env:
             CYPRESS_SPLIT_SPEC_API_KEY: '${{ secrets.SPLIT_SPEC_API_KEY }}'
-
-      - name: Run Cypress Cucumber
-        continue-on-error: true
-        if: always()
-        run: npm run cy:cucumber:run
 
       - name: Get Allure history
         uses: actions/checkout@v2
@@ -48,21 +42,9 @@ jobs:
             allure_results: allure-results
             gh_pages: allure
 
-      - name: Deploy report to Github Pages
-        if: always()
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-            github_token: ${{ secrets.GITHUB_TOKEN }}
-            publish_branch: allure
-            publish_dir: allure-history
-        
       - name: Deploy to GitHub Pages
         id: deployment
         uses: JamesIves/github-pages-deploy-action@4.2.0
         with:
-          token: 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	
           branch: main
           folder: ./allure-history
-          
-      - name: Show allure
-        run: cat ./allure-history/index.html
