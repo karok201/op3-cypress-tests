@@ -1,0 +1,3 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Thu Dec 01 10:44:06 GMT 2022","Thu Dec 01 10:44:10 GMT 2022","3826","","A. Login test","","","","should move to login page and log in",""
+"passed","Thu Dec 01 10:44:02 GMT 2022","Thu Dec 01 10:44:06 GMT 2022","4263","","A. Login test","","","","should show landing page",""
