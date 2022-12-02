@@ -1,0 +1,8 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"failed","Fri Dec 02 11:47:46 GMT 2022","Fri Dec 02 11:48:23 GMT 2022","36452","","B. Register user","","","","can generate a new email address and sign up",""
+"passed","Fri Dec 02 11:50:58 GMT 2022","Fri Dec 02 11:51:14 GMT 2022","15760","","G. Create course group","","","","should create course program",""
+"failed","Fri Dec 02 11:49:47 GMT 2022","Fri Dec 02 11:50:00 GMT 2022","12743","","E. Profile editing","","","","should assert profile page",""
+"passed","Fri Dec 02 11:47:32 GMT 2022","Fri Dec 02 11:47:36 GMT 2022","4130","","A. Login test","","","","should show landing page",""
+"passed","Fri Dec 02 11:52:15 GMT 2022","Fri Dec 02 11:52:29 GMT 2022","14017","","I. Create team","","","","should create new team",""
+"passed","Fri Dec 02 11:47:36 GMT 2022","Fri Dec 02 11:47:40 GMT 2022","3732","","A. Login test","","","","should move to login page and log in",""
+"failed","Fri Dec 02 11:48:23 GMT 2022","Fri Dec 02 11:48:28 GMT 2022","4711","","B. Register user","","","","can receive the confirmation email and extract the code",""
