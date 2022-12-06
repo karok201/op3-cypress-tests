@@ -18,7 +18,7 @@ describe('F. Create course', () => {
     });
 
     it('should create course', function () {
-        cy.admin(Cypress.env('email'), Cypress.env('password'), { log: false });
+        cy.admin();
 
         // Go to add courses page
         cy.xpath("//a[text()='Courses']").click();

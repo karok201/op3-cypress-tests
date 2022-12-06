@@ -15,6 +15,10 @@ describe('B. Register user', () => {
         })
     })
 
+    beforeEach(() => {
+        Cypress.Cookies.preserveOnce(['company_policy_session', 'XSRF-TOKEN']);
+    });
+
     it('can generate a new email address and sign up', () => {
         cy.visit(Cypress.config().baseUrl);
 
@@ -29,6 +33,10 @@ describe('B. Register user', () => {
 
         // Click on submit button
         cy.xpath("//button[@type='submit']").click();
-        cy.location('pathname').should('eq', '/learning/courses')
+        cy.location('pathname').should('eq', '/learning/courses', { timeout: 1000 });
+    });
+
+    after(() => {
+        cy.clearCookies();
     });
 });

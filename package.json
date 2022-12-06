@@ -5,9 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "node cypress/scripts/runner.js",
-    "cy:open": "npx cypress open --env allure=true --config specPattern=cypress/e2e/examples/** --browser chrome",
+    "cy:open": "npx as-a op3 cypress open --env allure=true",
     "cy:cucumber:open": "npx cypress open --env allure=true --config specPattern=cypress/e2e/cucumber/*.feature,excludeSpecPattern=*.js --browser chrome",
     "cy:run": "DEBUG=allure-plugin* npx cypress run --config specPattern=cypress/e2e/examples/* --env allure=true --browser chrome",
+    "cy:run1": "npx as-a op3 cypress run --env allure=true",
     "cy:cucumber:run": "DEBUG=allure-plugin* npx cypress run --config specPattern=cypress/e2e/cucumber/*.feature,excludeSpecPattern=*.js --env allure=true --browser chrome",
     "allure:report": "allure generate allure-results --clean -o allure-report",
     "allure:clear": "rm -r allure-results/ allure-report cypress/screenshots || true",
@@ -16,7 +17,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "cypress": "^10.10.0",
+    "cypress": "11.2.0",
     "cypress-recurse": "^1.23.0",
     "cypress-xpath": "^2.0.1",
     "dotenv": "^16.0.3",

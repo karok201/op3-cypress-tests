@@ -13,7 +13,10 @@ Installed [as-a](https://github.com/bahmutov/as-a)
 Created ~/.as-a.ini
 ```
 [op3]
-CYPRESS_password=secret
+AUTHNAME=AAA
+USERNAME=user@aa.com
+PASSWORD=123
+URL=http://localhost/
 ```
 
 # Getting started
